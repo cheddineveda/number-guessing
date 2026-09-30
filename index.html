@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="game-card">
+        <p class="eyebrow">Guessing Game</p>
+        <h1>Number Guessing</h1>
+
+        <div class="rules">
+          <p>I'm thinking of a number from <strong>1</strong> to <strong>100</strong>.</p>
+          <p>You have <strong>10</strong> attempts to find it.</p>
+        </div>
+
+        <form id="guess-form" class="guess-form">
+          <label for="guess-input">Enter your guess</label>
+          <div class="input-row">
+            <input
+              id="guess-input"
+              type="number"
+              min="1"
+              max="100"
+              placeholder="e.g. 42"
+              required
+            />
+            <button type="submit">Guess</button>
+          </div>
+        </form>
+
+        <div class="status-panel">
+          <p id="message" class="message" aria-live="polite">Start guessing!</p>
+          <p class="meta">Attempts used: <span id="attempts">0</span> / 10</p>
+          <p class="meta">Previous guesses: <span id="history">None yet</span></p>
+        </div>
+
+        <button id="restart-button" class="secondary" type="button">New Game</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
